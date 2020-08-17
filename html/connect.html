@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../bootstrap-4.5.0-dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/connect.css">
+		<script src="../js/jquery.js"></script>
+		<script src="../bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://webapi.amap.com/maps?v=1.4.15&key=8823d88d5f3a9a22ff8f84528ec1a554"></script>
+	</head>
+	<body>
+		<div class="box">
+			<header>
+				<nav class="navbar navbar-expand-lg navbar-light ">
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+				
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				   <ul class="navbar-nav mr-auto">
+				     <li class="nav-item">
+				       <a class="nav-link " href="../index.html" >| 首页 |</a>
+				     </li>
+				     <li class="nav-item">
+				       <a class="nav-link" href="about.html">| 关于 |</a>
+				     </li>
+				     <li class="nav-item">
+				       <a class="nav-link" href="example.html">| 案例 |</a>
+				     </li>
+				     <li class="nav-item">
+				       <a class="nav-link" href="active.html">| 活动 |</a>
+				     </li>
+				     <li class="nav-item">
+				       <a class="nav-link" href="connect.html" style="color: lightblue!important">| 联系 |</a>
+				     </li>
+				   </ul>
+				   
+				  </div>
+				</nav>
+				
+				<img src="../img/logo.webp" alt="" class="logo">
+			</header>
+			<main class="row justify-content-around container">
+				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 ipt">
+					<div class="form-group">
+					    <label for="inputAddress">姓名</label>
+					    <input type="text" id="name" class="form-control" id="inputAddress">
+					  </div>
+					  <div class="form-group">
+					    <label for="inputAddress2">联系电话</label>
+					    <input type="text" id="tel" class="form-control" id="inputAddress2" >
+					  </div>
+					   <div class="form-group">
+					      <label for="exampleFormControlTextarea1">内容</label>
+					      <textarea id="content" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+					    </div>
+					<button type="button" class="btn btn-dark">提交</button>
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 msg">
+					<p>地址：蘇州市園區金雞湖大道00號佘山林荫大道18号</p>
+					<p>电话：400-000-5000</p>
+					<p>传真：0500-60000000</p>
+					<p>邮箱： yishujia_123@100.com</p>
+				</div>
+			</main>
+			<div id="mapbox" ></div>
+			<div class="ft">Copyright © 2010 - 2016 影像工作室</div>
+			<div class="backtop">︿</div>
+		</div>
+		
+		<script src="../js/index.js"></script>
+		<script>
+			var map = new AMap.Map('mapbox', {
+			         zoom:15,//级别
+			         center: [106.46365615350342, 29.5450869191028],//中心点坐标
+			        
+			     });
+			var marker = new AMap.Marker({
+			    position: new AMap.LngLat(106.46365615350342, 29.5450869191028),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+			    title: '重庆沙坪坝公园'
+			});
+			map.add(marker);
+			
+		</script>
+	</body>
+</html>

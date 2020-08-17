@@ -1,0 +1,244 @@
+li {
+  list-style: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  width: 100%;
+  height: auto;
+}
+.gray {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+}
+ .backtop {
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  text-align: center;
+  line-height: 25px;
+  font-weight: 900;
+  color: #fff;
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+.h-btn {
+  padding: 11px 30px;
+  color: #ccc;
+  border: 2px solid #ccc;
+  background: transparent;
+  font-size: 11px;
+  border-radius: 4px;
+  display: block;
+  margin: 30px auto 50px;
+}
+.h-btn:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.head {
+  padding: 100px 100px 40px 100px;
+  color: #ccc;
+  text-align: center;
+}
+.head > p {
+  font-size: 22px;
+}
+.head > span {
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+header {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: url("../img/index-bg.jpg") no-repeat -80px 0 /145% ;
+  background-attachment: fixed;
+}
+header > .navbar {
+  background: transparent;
+  margin-top: 10%;
+  line-height: 40px;
+}
+header > .navbar button {
+  background: #ccc;
+}
+header > .navbar ul {
+  margin: 0 auto;
+}
+header > .navbar li {
+  margin: 0 20px;
+}
+header > .navbar li a {
+  color: #EEEEEE !important;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+header > .navbar li a:hover {
+  color: lightblue!important;
+}
+header > .logo {
+  position: absolute;
+  left: calc(50% - (198px / 2));
+  top: calc(60% - (127px / 2));
+}
+main {
+  width: 100%;
+  height: auto;
+  background: #000;
+  position: relative;
+}
+main > ul {
+  margin: 0;
+}
+main > ul::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+main > ul > li {
+  float: left;
+  width: calc(100% / 3);
+  height: auto;
+}
+main > ul > li img {
+  width: 100%;
+  height: auto;
+}
+/* .mengban{
+	.pst-abs(left,0,top,0);
+	.wh(100%,100%);
+	.bg(rgba(0,0,0,0.6));
+	transition: all 0.5s ease;
+	&:hover{
+		.bg(rgba(0,0,0,0));
+	}
+} */
+footer {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  position: relative;
+}
+footer::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+footer > ul {
+  width: 100%;
+  height: auto;
+  margin: 60px 0 0 0 ;
+}
+footer > ul::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+footer > ul > li {
+  float: left;
+  position: relative;
+  width: calc(100% / 6);
+  height: auto;
+  background: #000000;
+}
+footer > ul > li > img {
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%);
+}
+footer > ul > li > img:hover {
+  filter: grayscale(0);
+}
+footer > .ft {
+  text-align: center;
+  background: #eee;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  font-size: 14px;
+}
+@media screen and (max-width: 992px) {
+  header {
+    width: 100%;
+    height: 56vh;
+  }
+  header > .logo {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    margin-left: -99px;
+    margin-top: -63.5px;
+  }
+  .navbar {
+    margin: 0!important;
+    padding: 10px!important;
+    background: #000 !important;
+  }
+  .navbar button {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 30px;
+  }
+  .navbar button span {
+    margin: -8px 0 0 -6px;
+  }
+  .head {
+    padding: 80px 0 0 0;
+  }
+  footer {
+    width: 100%;
+    height: auto;
+  }
+  footer > ul > li {
+    width: 25%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 786px) {
+  footer > ul > li {
+    width: calc(50% - 20px);
+    height: auto;
+    margin: 10px;
+  }
+  footer {
+    width: 100%;
+    height: auto;
+  }
+  .ft {
+    position: none;
+  }
+  .head {
+    padding: 80px 40px  0;
+  }
+  header {
+    width: 100%;
+    height: 45vh;
+    background: url("../img/index-bg.jpg") no-repeat -80px 0 /300% ;
+  }
+  header > .logo {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    margin-left: -99px;
+    margin-top: -63.5px;
+  }
+}

@@ -1,0 +1,155 @@
+@import 'myless';
+
+.box{
+	.wh(100%,auto);
+}
+
+.backtop{
+	position: fixed;
+	right: 20px;
+	bottom: 40px;
+	width: 30px;
+	height: 30px;
+	background: #000;
+	text-align: center;
+	line-height: 25px;
+	font-weight: 900;
+	color: #fff;
+	display:none;
+	cursor: pointer;
+	user-select: none;
+}
+.h-btn{
+	padding: 11px 30px;
+	color: #ccc;
+	border: 2px solid #ccc;
+	background: transparent;
+	font-size: 11px;
+	border-radius: 4px;
+	display: block;
+	margin: 30px auto 50px;
+	&:hover{
+		color: #fff;
+		border-color: #fff;
+	}
+}
+.head{
+	padding: 100px 150px 80px 150px;
+	color: #888;
+	text-align: center;
+	>p{
+		font-size: 22px;
+	}
+	>span{
+		font-size: 12px;
+		letter-spacing: 2px;
+	}
+}
+header{
+	.wh(100%,100vh);
+	
+	overflow: hidden;
+	.bg(url("../img/list3.webp")no-repeat ~'0 0 /100% ');
+	background-attachment: fixed;
+	
+	>.navbar{
+		background: transparent;
+		margin-top: 10%;
+		line-height: 40px;
+		
+		button{
+			.bg(#ccc);
+		}
+		ul{margin: 0 auto;}
+		li{
+			a{
+				color:#EEEEEE!important;
+				padding: 5px 10px;
+				font-size: 13px;
+				&:hover{
+					color: lightblue!important;
+				}
+			}
+			
+			margin: 0 20px;
+		}
+		
+		
+	}
+	>.logo{
+		.pst-abs(left,calc(50% - (198px / 2) ),top,calc(60% - (127px / 2)));
+	}
+}
+main{
+	.box();
+	margin: 0 auto!important;
+	padding: 100px 0;
+	color: #808080;
+	.msg{
+		>p{
+			margin: 0;
+			line-height: 40px;
+			font-size: 14px;
+		}
+	}
+}
+#mapbox{
+	width: 100%;
+	height: 300px;
+}
+.ft{
+		text-align: center;
+		.bg(#eee);
+		.wh(100%,auto);
+		padding: 20px;
+		font-size: 14px;
+	}
+@media screen and (max-width:992px) {
+	header{
+		.wh(100%,56vh);
+		
+		>.logo{
+			.pst-abs(left,50%,top,30%);
+			margin-left: -99px;
+			margin-top: -63.5px;
+		}
+	}
+	.navbar{
+		margin: 0!important;
+		padding: 10px!important;
+		.bg(#000)!important;
+		button{
+			.wh(30px ,30px);
+			text-align: center;
+			font-size: 12px;
+			line-height: 30px;
+			span{
+				margin: -8px 0 0 -6px;
+			}
+		}
+	}
+	.head{
+		padding: 80px 0 40px 0;
+	}
+	
+}
+@media screen and (max-width:786px) {
+	
+	header{
+		.wh(100%,45vh);
+		.bg(url("../img/list3.webp")no-repeat ~'-80px 0 /300% ');
+		>.logo{
+			.pst-abs(left,50%,top,25%);
+			margin-left: -99px;
+			margin-top: -63.5px;
+		}
+	}
+	main{
+		padding: 40px 20px;
+		button{
+			margin: 20px 0 60px;
+		}
+	}
+	
+}
+
